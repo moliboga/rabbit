@@ -8,5 +8,4 @@ public class ConsumerModuleApplication {
     public static void main(String[] args) {
         SpringApplication.run(ConsumerModuleApplication.class, args);
     }
-
 }
