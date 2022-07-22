@@ -1,4 +1,4 @@
-package com.example.consumermodule;
+package com.example.consumermodule.model;
 
 import lombok.*;
 

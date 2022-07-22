@@ -1,4 +1,4 @@
-package com.example.consumermodule;
+package com.example.consumermodule.rabbitmq;
 
 import org.springframework.amqp.core.*;
 import org.springframework.amqp.rabbit.connection.ConnectionFactory;

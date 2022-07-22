@@ -1,27 +1,39 @@
 package com.example.consumermodule;
 
-import org.springframework.amqp.rabbit.annotation.RabbitListener;
+import com.example.consumermodule.model.Info;
+import com.example.consumermodule.model.Order;
+import com.example.consumermodule.mongo.MongoService;
+import com.example.consumermodule.rabbitmq.Listener;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.util.ArrayList;
 import java.util.List;
 
 @RestController
 public class ConsumeController {
 
-    private List<Order> currentOrdersQueue = new ArrayList<>();
-
-    @RabbitListener(queues = "${queueName}")
-    public void listener(Order order){
-        currentOrdersQueue.add(order);
-        System.out.println(order);
-    }
+    @Autowired
+    private MongoService mongoService;
+    @Autowired
+    private Listener listener;
 
     @GetMapping("/consume")
-    public List<Order> handleQueue(){
-        List<Order> returnList = currentOrdersQueue;
-        currentOrdersQueue = new ArrayList<>();
-        return returnList;
+    public String consume(){
+        mongoService.addAll(listener.getQueue());
+        listener.getQueue().clear();
+        return "Orders were successfully consumed.";
+    }
+
+    @GetMapping("/info")
+    public Info getInfo(){
+        Info info = new Info();
+        info.setConsumedOrders(this.getConsumedOrders());
+        info.setUnconsumedOrders(listener.getQueue());
+        return info;
+    }
+
+    private List<Order> getConsumedOrders() {
+        return mongoService.getAll();
     }
 }
