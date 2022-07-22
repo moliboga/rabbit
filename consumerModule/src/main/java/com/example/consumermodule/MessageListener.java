@@ -1,6 +1,5 @@
-package com.consumer;
+package com.example.consumermodule;
 
-import com.Order;
 import org.springframework.amqp.rabbit.annotation.RabbitListener;
 import org.springframework.stereotype.Component;
 

@@ -1,12 +1,12 @@
-package com.publisher;
+package com.example.consumermodule;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class PublishRabbitApplication {
+public class ConsumerModuleApplication {
     public static void main(String[] args) {
-        SpringApplication.run(PublishRabbitApplication.class, args);
+        SpringApplication.run(ConsumerModuleApplication.class, args);
     }
 
 }

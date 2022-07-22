@@ -1,4 +1,4 @@
-package com.publisher;
+package com;
 
 import com.Order;
 import org.springframework.amqp.core.AmqpTemplate;
