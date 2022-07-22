@@ -12,7 +12,6 @@ import org.springframework.data.mongodb.core.mapping.Field;
 @Document(collection = "orders")
 public class Order {
 
-    @Id
     private String name;
 
     @Field
