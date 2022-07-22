@@ -1,10 +1,11 @@
-package com;
+package com.publisher;
 
+import com.Order;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-public class Controller {
+public class PublishController {
 
     @Autowired
     private RabbitMQSender rabbitMQSender;
