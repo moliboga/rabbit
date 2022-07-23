@@ -17,10 +17,13 @@ public class ConsumeController {
     private MongoService mongoService;
     @Autowired
     private Listener listener;
+    @Autowired
+    private EmailSender emailSender;
 
     @GetMapping("/consume")
     public String consume(){
         mongoService.addAll(listener.getQueue());
+        emailSender.sendCurrent(listener.getQueue());
         listener.getQueue().clear();
         return "Orders were successfully consumed.";
     }
