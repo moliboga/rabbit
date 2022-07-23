@@ -1,4 +1,4 @@
-package com;
+package publisher;
 
 import lombok.*;
 

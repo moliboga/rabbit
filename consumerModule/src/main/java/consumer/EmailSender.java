@@ -1,6 +1,6 @@
-package com.example.consumermodule;
+package consumer;
 
-import com.example.consumermodule.model.Order;
+import consumer.model.Order;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.mail.SimpleMailMessage;

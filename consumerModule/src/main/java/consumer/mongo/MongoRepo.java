@@ -1,6 +1,6 @@
-package com.example.consumermodule.mongo;
+package consumer.mongo;
 
-import com.example.consumermodule.model.Order;
+import consumer.model.Order;
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.stereotype.Repository;
 

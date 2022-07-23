@@ -1,4 +1,4 @@
-package com;
+package publisher;
 
 import org.springframework.amqp.core.*;
 import org.springframework.amqp.rabbit.connection.ConnectionFactory;

@@ -1,6 +1,5 @@
-package com;
+package publisher;
 
-import com.Order;
 import org.springframework.amqp.core.AmqpTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;

@@ -1,9 +1,9 @@
-package com.example.consumermodule;
+package consumer;
 
-import com.example.consumermodule.model.Info;
-import com.example.consumermodule.model.Order;
-import com.example.consumermodule.mongo.MongoService;
-import com.example.consumermodule.rabbitmq.Listener;
+import consumer.model.Info;
+import consumer.model.Order;
+import consumer.mongo.MongoService;
+import consumer.rabbitmq.Listener;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
