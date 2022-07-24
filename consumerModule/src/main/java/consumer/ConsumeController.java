@@ -1,5 +1,6 @@
 package consumer;
 
+import consumer.email.EmailSender;
 import consumer.model.Info;
 import consumer.model.Order;
 import consumer.mongo.MongoService;
